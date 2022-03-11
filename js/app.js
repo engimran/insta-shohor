@@ -15,9 +15,8 @@ const isLiked = (id) => {
 
   return likedPostsId?.length && !!likedPostsId.includes(id);
 };
-
 const addToLiked = (id) => {
-  likedPostsId.plus(id);
+  likedPostsId.push(id);
   showPosts(posts);
 
 };
@@ -29,7 +28,6 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  console.log(text.length)
   return (text.length > 30 && text.length < 30) ? 'text' : text.slice(0, 30)
   consolelog(text)
 };
